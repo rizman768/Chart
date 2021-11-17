@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChartController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-use App\Http\Controllers\ChartController;
-Route::get('dashboard', [ChartController::class, 'dashboard']);
-Route::get('index', [ChartController::class, 'index'])->name('index');
+// 
+Route::get('dashboard', [ChartController::class, 'dashboard'])->middleware('auth');
+Route::get('index', [ChartController::class, 'index'])->name('index')->middleware('auth');
+
+//Auth
+Route::get('login', [AuthController::class, 'index'])->name('login');
+Route::post('userlogin', [AuthController::class, 'login']);
+Route::get('logout', [AuthController::class, 'logout']);
+
+
+

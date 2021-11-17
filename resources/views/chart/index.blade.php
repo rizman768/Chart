@@ -59,7 +59,8 @@
         },
         series: [{
             name: 'Framework',
-            data: {!! json_encode($data) !!}
+            data: 
+            {!! json_encode($data) !!}
         }]
     });
 </script>
