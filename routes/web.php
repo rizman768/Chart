@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChartController;
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,5 +28,12 @@ Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('userlogin', [AuthController::class, 'login']);
 Route::get('logout', [AuthController::class, 'logout']);
 
+//User
+Route::get('manajemenuser', [UserController::class, 'index'])->name('manajemenuser');
+Route::get('tambahuser', [UserController::class, 'tambahuser']);
+Route::post('storetambahuser', [UserController::class, 'create']);
+Route::get('edituser/{id}', [UserController::class, 'edituser']); 
+Route::post('updateuser', [UserController::class, 'update']);
+Route::post('deleteuser/{id}', [UserController::class, 'delete']);
 
 
