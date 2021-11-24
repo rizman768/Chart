@@ -10,14 +10,14 @@
                             <!-- VISIT CHART -->
                             <div class="panel">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Orang yang menyukai Framework</h3>
+                                    <h1 class="panel-title">Temperature Suhu</h1>
                                     <div class="right">
                                         <button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
                                         <button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    <div id="visits-chart" class="ct-chart"></div>
+                                    <div id="chart" class="ct-chart"></div>
                                 </div>
                             </div>
                             <!-- END VISIT CHART -->
@@ -28,7 +28,7 @@
 			<!-- END MAIN CONTENT -->
 		</div>
 @endsection
-@section('chart1')
+@section('chart')
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script>
 	Highcharts.chart('chart', {
@@ -36,25 +36,25 @@
             type: 'column'
         },
         title: {
-            text: 'Jumlah orang yang menyukai Framework'
+            text: 'Temperature Suhu'
         },
         subtitle: {
-            text: 'Source: Ngasal'
+            text: 'Source: WorldClimate.com'
         },
         xAxis: {
-            categories: {!! json_encode($categories) !!},
+            categories: {!! json_encode($labels) !!},
             crosshair: true
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Jumlah (orang)'
+                text: 'Rainfall (mm)'
             }
         },
         tooltip: {
             headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
             pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f} orang</b></td></tr>',
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
             footerFormat: '</table>',
             shared: true,
             useHTML: true
@@ -66,14 +66,22 @@
             }
         },
         series: [{
-            name: 'Framework',
-            data: 
-            {!! json_encode($data) !!}
+            name: 'Hum SHT',
+            data: {!! json_encode($data1) !!}
+
+        }, {
+            name: 'TEMPC DS',
+            data: {!! json_encode($data2) !!}
+
+        }, {
+            name: 'TEMPC SHT',
+            data: {!! json_encode($data3) !!}
+
         }]
     });
 </script>
 @endsection
-@section('chart')
+@section('chart1')
     <script>
     $(function() {
         var data, options;
@@ -147,10 +155,17 @@
 
         // visits chart
         data = {
-            labels: {!! json_encode($categories) !!},
-            series: [
-                {!! json_encode($data) !!}
-            ]
+            labels: {!! json_encode($labels) !!},
+            series: [{
+                name: 'HUM SHT',
+                data: {!! json_encode($data1) !!},
+            }, {
+                name: 'TEMPC DS',
+                data: {!! json_encode($data2) !!},
+            }, {
+                name: 'TEMPC SHT',
+                data: {!! json_encode($data3) !!},
+            }]
         };
 
         options = {
