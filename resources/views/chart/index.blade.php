@@ -126,7 +126,7 @@
             type: 'column'
         },
         title: {
-            text: 'Temperature Suhu'
+            text: 'INDOOR TEST'
         },
         subtitle: {
             text: 'Indoor Test Anomaly Marks'
@@ -179,7 +179,7 @@
             type: 'column'
         },
         title: {
-            text: 'Temperature Suhu'
+            text: 'OUTDOOR TEST'
         },
         subtitle: {
             text: 'Outdoor Test Anomaly Marks'
@@ -232,7 +232,7 @@
             type: 'column'
         },
         title: {
-            text: 'Temperature Suhu'
+            text: 'BERKELEY TEST'
         },
         subtitle: {
             text: 'Berkeley Test Anomaly Marks'
@@ -285,7 +285,7 @@
             type: 'column'
         },
         title: {
-            text: 'Temperature Suhu'
+            text: 'INDOOR IMPUTATED'
         },
         subtitle: {
             text: 'Indoor Imputated Marked Anomaly'
@@ -338,7 +338,7 @@
             type: 'column'
         },
         title: {
-            text: 'Temperature Suhu'
+            text: 'OUTDOOR IMPUTATED'
         },
         subtitle: {
             text: 'Outdoor Immputated Marked Anomaly'
@@ -391,7 +391,7 @@
             type: 'column'
         },
         title: {
-            text: 'Temperature Suhu'
+            text: 'BERKELEY IMPUTATED'
         },
         subtitle: {
             text: 'Berkeley Immputated Marked Anomaly'
