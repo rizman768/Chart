@@ -13,7 +13,7 @@
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-	<link rel="stylesheet" href="assets/css/demo.css">
+	<!-- <link rel="stylesheet" href="assets/css/demo.css"> -->
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
@@ -43,16 +43,16 @@
 									<label for="signin-password" class="control-label sr-only">Password</label>
 									<input type="password" class="form-control" name="password" id="signin-password" " placeholder="Password">
 								</div>
-								<div class="form-group clearfix">
+								<!-- <div class="form-group clearfix">
 									<label class="fancy-checkbox element-left">
 										<input type="checkbox">
 										<span>Remember me</span>
 									</label>
-								</div>
+								</div> -->
 								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
-								<div class="bottom">
+								<!-- <div class="bottom">
 									<span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
-								</div>
+								</div> -->
 							</form>
 						</div>
 					</div>
@@ -60,7 +60,7 @@
 						<div class="overlay"></div>
 						<div class="content text">
 							<h1 class="heading">Login LPPM</h1>
-							<p>by The Develovers</p>
+							<p>Anomaly Detection</p>
 						</div>
 					</div>
 					<div class="clearfix"></div>
