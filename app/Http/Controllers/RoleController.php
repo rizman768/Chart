@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 use App\Models\Role;
+use App\Models\User;
 
 class RoleController extends Controller
 {

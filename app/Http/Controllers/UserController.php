@@ -19,7 +19,8 @@ class UserController extends Controller
 
     public function tambahuser(){
 
-    	return view('manajemen_users.tambah_user');
+        $role = Role::all();
+    	return view('manajemen_users.tambah_user',['role' => $role]);
     }
     
     public function create(Request $request){

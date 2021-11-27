@@ -47,8 +47,12 @@
 	                                </div>
 	                                <div class="col-xs-12 col-sm-12 col-md-12">
 	                                    <div class="form-group">
-	                                        <strong>Role Id:</strong>
-	                                        <input type="text" name="role_id" class="form-control" placeholder="(1 = Admin, 2 = User)">
+	                                        <strong>Role :</strong>
+	                                        <select class="form-control" name="role_id" >
+								                @foreach ( $role as $r )
+	                                                <option value="{{$r->id}}">{{ $r->role }}</option>
+	                                            @endforeach
+	                                        </select>
 	                                    </div>
 	                                </div>
 	                                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
