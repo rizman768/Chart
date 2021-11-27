@@ -123,7 +123,7 @@
 <script>
 	Highcharts.chart('chart1', {
         chart: {
-            type: 'column'
+            type: 'line'
         },
         title: {
             text: 'INDOOR TEST'
@@ -176,7 +176,7 @@
 
     Highcharts.chart('chart2', {
         chart: {
-            type: 'column'
+            type: 'line'
         },
         title: {
             text: 'OUTDOOR TEST'
@@ -229,7 +229,7 @@
 
     Highcharts.chart('chart3', {
         chart: {
-            type: 'column'
+            type: 'line'
         },
         title: {
             text: 'BERKELEY TEST'
@@ -282,7 +282,7 @@
 
     Highcharts.chart('chart4', {
         chart: {
-            type: 'column'
+            type: 'line'
         },
         title: {
             text: 'INDOOR IMPUTATED'
@@ -335,7 +335,7 @@
 
     Highcharts.chart('chart5', {
         chart: {
-            type: 'column'
+            type: 'line'
         },
         title: {
             text: 'OUTDOOR IMPUTATED'
@@ -388,7 +388,7 @@
 
     Highcharts.chart('chart6', {
         chart: {
-            type: 'column'
+            type: 'line'
         },
         title: {
             text: 'BERKELEY IMPUTATED'

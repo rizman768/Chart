@@ -45,6 +45,12 @@
 	                                        <input type="password" name="password" class="form-control" placeholder="Password">
 	                                    </div>
 	                                </div>
+	                                <div class="col-xs-12 col-sm-12 col-md-12">
+	                                    <div class="form-group">
+	                                        <strong>Role Id:</strong>
+	                                        <input type="text" name="role_id" class="form-control" placeholder="(1 = Admin, 2 = User)">
+	                                    </div>
+	                                </div>
 	                                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 	                                    <button type="submit" class="btn btn-primary">Submit</button>
 	                                </div>

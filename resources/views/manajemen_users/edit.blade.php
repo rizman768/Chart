@@ -42,6 +42,17 @@
 	                                        <input type="email" name="email" class="form-control" value="{{ $users->email }}" placeholder="Email">
 	                                    </div>
 	                                </div>
+	                                <div class="col-xs-12 col-sm-12 col-md-12">
+	                                    <div class="form-group">
+	                                        <strong>Role Id:</strong>
+	                                        <select class="form-control" name="role_id" >
+                                            <option selected value="{{$users->role_id}}">{{$users->role->role }}</option>
+							                @foreach ( $role as $r )
+                                                <option value="{{$r->id}}">{{ $r->role }}</option>
+                                            @endforeach
+                                        </select>
+	                                    </div>
+	                                </div>
 	                                <!-- <div class="col-xs-12 col-sm-12 col-md-12">
 	                                    <div class="form-group">
 	                                        <strong>Password :</strong>
