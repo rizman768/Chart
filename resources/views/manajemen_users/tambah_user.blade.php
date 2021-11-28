@@ -45,6 +45,16 @@
 	                                        <input type="password" name="password" class="form-control" placeholder="Password">
 	                                    </div>
 	                                </div>
+	                                <div class="col-xs-12 col-sm-12 col-md-12">
+	                                    <div class="form-group">
+	                                        <strong>Role :</strong>
+	                                        <select class="form-control" name="role_id" >
+								                @foreach ( $role as $r )
+	                                                <option value="{{$r->id}}">{{ $r->role }}</option>
+	                                            @endforeach
+	                                        </select>
+	                                    </div>
+	                                </div>
 	                                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 	                                    <button type="submit" class="btn btn-primary">Submit</button>
 	                                </div>

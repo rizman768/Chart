@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\User;
+use App\Models\Role;
 
 class UserController extends Controller
 {
@@ -17,7 +19,8 @@ class UserController extends Controller
 
     public function tambahuser(){
 
-    	return view('manajemen_users.tambah_user');
+        $role = Role::all();
+    	return view('manajemen_users.tambah_user',['role' => $role]);
     }
     
     public function create(Request $request){
@@ -25,6 +28,7 @@ class UserController extends Controller
             'name' => $request->nama,
             'email' => $request->email,
             'password' => bcrypt($request->password),
+            'role_id' => $request->role_id,
             'remember_token' => Str::random(60),
         ]);
 
@@ -33,14 +37,16 @@ class UserController extends Controller
 
     public function edituser($id){
    		$users = User::where('id', $id)->first();
+         $role = Role::all();
 
-        return view('manajemen_users.edit')->with(compact('users'));
+        return view('manajemen_users.edit')->with(compact('users','role'));
     }
 
     public function update(Request $request){
     	$users = User::where('id', $request->id)->update([
             'name' => $request->name,
             'email' => $request->email,
+            'role_id' => $request->role_id,
             'remember_token' => Str::random(60),
         ]);
 
