@@ -24,10 +24,31 @@ class ChartController extends Controller
 
     	foreach ($indoor as $suhu) {
     		$labels1[] = $suhu->timestamp;
-            $data11[] = $suhu->hum_sht;
-            $data21[] = $suhu->tempc_ds;
-            $data31[] = $suhu->tempc_sht;
-            $data41[] = $suhu->batv;
+
+            if ($suhu->anomaly_hum_sht == 1){
+                $data11[] = (object) ['y' => $suhu->hum_sht, 'color' =>  '#BF0B23'];
+            } else {
+                $data11[] = $suhu->hum_sht;
+            }
+
+            if ($suhu->anomaly_tempc_ds == 1){
+                $data21[] = (object) [ 'y' => $suhu->tempc_ds, 'color' => '#BF0B23'];
+            } else {
+                $data21[] = $suhu->tempc_ds;
+            }
+            
+            if ($suhu->anomaly_tempc_sht == 1){
+                $data31[] = (object) [ 'y' => $suhu->tempc_sht, 'color' => '#BF0B23'];
+            } else {
+                $data31[] = $suhu->tempc_sht;
+            }
+            
+            if ($suhu->anomaly_batv == 1){
+                $data41[] = (object) [ 'y' => $suhu->batv, 'color' => '#BF0B23'];
+            } else {
+                $data41[] = $suhu->batv;
+            }
+            
     	}
 
         $labels2 = [];
@@ -38,10 +59,26 @@ class ChartController extends Controller
 
         foreach ($outdoor as $suhu) {
             $labels2[] = $suhu->timestamp;
-            $data12[] = $suhu->hum_sht;
-            $data22[] = $suhu->tempc_ds;
-            $data32[] = $suhu->tempc_sht;
-            $data42[] = $suhu->batv;
+            if ($suhu->anomaly_hum_sht == 1){
+                $data12[] = (object) [ 'y' => $suhu->hum_sht, 'color' => '#BF0B23'];
+            } else {
+                $data12[] = $suhu->hum_sht;
+            }
+            if ($suhu->anomaly_tempc_ds == 1){
+                $data22[] = (object) [ 'y' => $suhu->tempc_ds, 'color' => '#BF0B23'];
+            } else {
+                $data22[] = $suhu->tempc_ds;
+            }
+            if ($suhu->anomaly_tempc_sht == 1){
+                $data32[] = (object) [ 'y' => $suhu->tempc_sht, 'color' => '#BF0B23'];
+            } else {
+                $data32[] = $suhu->tempc_sht;
+            }
+            if ($suhu->anomaly_batv == 1){
+                $data42[] = (object) [ 'y' => $suhu->batv, 'color' => '#BF0B23'];
+            } else {
+                $data42[] = $suhu->batv;
+            }
         }
 
         $labels3 = [];
@@ -52,10 +89,26 @@ class ChartController extends Controller
 
         foreach ($berkeley as $suhu) {
             $labels3[] = $suhu->timestamp;
-            $data13[] = $suhu->temperature;
-            $data23[] = $suhu->humadity;
-            $data33[] = $suhu->light;
-            $data43[] = $suhu->voltage;
+            if ($suhu->anomaly_temperature == 1){
+                $data13[] = (object) [ 'y' => $suhu->temperature, 'color' => '#BF0B23'];
+            } else {
+                $data13[] = $suhu->temperature;
+            }
+            if ($suhu->anomaly_humadity == 1){
+                $data23[] = (object) [ 'y' => $suhu->humadity, 'color' => '#BF0B23'];
+            } else {
+                $data23[] = $suhu->humadity;
+            }
+            if ($suhu->anomaly_light == 1){
+                $data33[] = (object) [ 'y' => $suhu->light, 'color' => '#BF0B23'];
+            } else {
+                $data33[] = $suhu->light;
+            }
+            if ($suhu->anomaly_voltage == 1){
+                $data43[] = (object) [ 'y' => $suhu->voltage, 'color' => '#BF0B23'];
+            } else {
+                $data43[] = $suhu->voltage;
+            }
         }
 
         $labels4 = [];

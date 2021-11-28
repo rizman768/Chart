@@ -123,7 +123,10 @@
 <script>
 	Highcharts.chart('chart1', {
         chart: {
-            type: 'line'
+            type: 'line',
+            zoomType: 'x',
+            panning: true,
+            panKey: 'shift'
         },
         title: {
             text: 'INDOOR TEST'
@@ -158,7 +161,6 @@
         series: [{
             name: 'HUM SHT',
             data: {!! json_encode($data11) !!}
-
         }, {
             name: 'TEMPC DS',
             data: {!! json_encode($data21) !!}
@@ -176,7 +178,10 @@
 
     Highcharts.chart('chart2', {
         chart: {
-            type: 'line'
+            type: 'line',
+            zoomType: 'x',
+            panning: true,
+            panKey: 'shift'
         },
         title: {
             text: 'OUTDOOR TEST'
@@ -229,7 +234,10 @@
 
     Highcharts.chart('chart3', {
         chart: {
-            type: 'line'
+            type: 'line',
+            zoomType: 'x',
+            panning: true,
+            panKey: 'shift'
         },
         title: {
             text: 'BERKELEY TEST'
@@ -282,7 +290,10 @@
 
     Highcharts.chart('chart4', {
         chart: {
-            type: 'line'
+            type: 'line',
+            zoomType: 'x',
+            panning: true,
+            panKey: 'shift'
         },
         title: {
             text: 'INDOOR IMPUTATED'
@@ -335,7 +346,10 @@
 
     Highcharts.chart('chart5', {
         chart: {
-            type: 'line'
+            type: 'line',
+            zoomType: 'x',
+            panning: true,
+            panKey: 'shift'
         },
         title: {
             text: 'OUTDOOR IMPUTATED'
@@ -388,7 +402,10 @@
 
     Highcharts.chart('chart6', {
         chart: {
-            type: 'line'
+            type: 'line',
+            zoomType: 'x',
+            panning: true,
+            panKey: 'shift'
         },
         title: {
             text: 'BERKELEY IMPUTATED'
