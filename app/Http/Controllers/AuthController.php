@@ -10,7 +10,10 @@ class AuthController extends Controller
 
 	public function index(){
 
-		return view('auths.login');
+		if (Auth::check()) {
+            return redirect('/dashboard');
+        }
+        return view('auths.login');
 	}
 
 	public function login(Request $request){
