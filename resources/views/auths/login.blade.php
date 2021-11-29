@@ -59,8 +59,8 @@
 					<div class="right">
 						<div class="overlay"></div>
 						<div class="content text">
-							<h1 class="heading">Login LPPM</h1>
-							<p>Anomaly Detection</p>
+							<h1 class="heading">Klorofil</h1>
+							<p>Dashboard Detector Anomali untuk Smart Greenhouse</p>
 						</div>
 					</div>
 					<div class="clearfix"></div>
